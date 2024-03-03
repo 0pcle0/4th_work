@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<link rel="stylesheet" href=" {{ url_for('static', filename='css/css template.css') }}">
+</head>
+
+<body>
+    <center>
+    <div>
+	<br><br><br><br><br><br>
+       <h1 align="center">비밀번호 재설정</h1><br><br>
+	<hr>
+        <form action="/newpw/{{id}}" method="POST">
+	<div>
+	<br><br>
+	    <b class="name">새로운 비밀번호</b><br><br>
+            <input type="text" class="text" id="username" name="newpw1" placeholder="    비밀번호를 입력해주세요.">
+	<br><br>
+        </div>
+        <div>
+	<b class="name">비밀번호 확인</b><br><br>
+            <input class="text" type="text" id="password" name="newpw2" placeholder="    비밀번호를 재입력해주세요."><br><br>  
+        </div>
+	<br>
+        </div>
+        <div>
+	<br>
+            <button type="submit" class="sign_up" >완료</button>
+</form>
+	<br>
+	<br>
+	    <button class="sign_up" onclick="location.href='/login/'" >처음으로</button>
+	 <br>
+        </div>
+    </div>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<link rel="stylesheet" href=" {{ url_for('static', filename='css/css template.css') }}">
+<script src="{{ url_for('static', filename='js/signup.js') }}" > </script>
+</head>
+
+<body>
+    <center>
+    <div>
+	<br><br><br><br>
+       <h1 align="center">회원가입</h1><br><br>
+	<hr>
+        <form action="/register/" method="POST" name="register">
+	<div>
+	<br><br>
+	<b class="name">NAME</b><br><br>
+        <input type="text" class="text" id="name" name="name" placeholder="    이름을 입력해주세요." required>
+	<br><br>
+	    <b class="name">ID</b><br><br>
+            <input type="text" class="text" id="username" name="username" placeholder="    ID를 입력해주세요." required>
+	<br><br>
+        </div>
+        <div>
+	<b class="name">PW</b><br><br>
+            <input class="text" type="password" id="password" name="password" placeholder="    비밀번호를 입력해주세요." required><br><br>  
+        </div>
+        <div>
+	<b class="name">PW Check</b><br><br>
+            <input class="text" type="password" id="password2"name="password2" placeholder="    비밀번호를 다시 입력해주세요." required><br><br>
+	<div>
+	<b class="name">H.P</b><br><br>
+	<input class="text" type="text" id="tel" name="tel" placeholder="    전화번호를 입력해주세요." required><br><br>
+	</div>
+        <div>
+	<b class="name">AGE</b><br><br>
+            <input  class="text" type="number" id="age" min="15" max="105" name="age" placeholder="    나이를 입력해주세요." required>
+	</div>
+        <div>
+	<br><br>
+            <input type="radio"  name="gender" value="남성" checked 	>남성  
+	    &nbsp;&nbsp;&nbsp;&nbsp
+            <input  type="radio" name="gender" value = "여성">여성
+	<br>
+        </div>
+        <div>
+	<br>
+            <button type="submit" class="sign_up" onclick="checkform();">가입하기</button>
+<br><br><br><br><br><br><br><br>
+	<br>
+        </div>
+    </div>
+    </form>
+    </center>
+</body>
+
+</html>

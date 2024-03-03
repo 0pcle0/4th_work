@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href=" {{ url_for('static', filename='css/css template.css') }}">
+<script language="javascript">
+function checkpw(frm)
+{
+   if (frm.pw.disabled==true)
+    frm.pw.disabled=false
+   else
+    frm.pw.disabled=true
+}
+</script>
+</head>
+<body>
+<section class="notice">
+  <div class="page-title">
+        <div class="container">
+            <h3>글쓰기</h3>
+        </div>
+    </div>
+
+  <!-- board list area -->
+    <div id="board-list">
+        <div class="container">
+            <table class="board-table">
+                <form action='/update/{{id}}', method='POST'>
+		<thead>
+                <tr>
+                    <th scope="col" class="th-num">제목</th>
+                    <th scope="col" class="th-title"><input type='text' name='title' class="textarea-head" name='title' value={{title}}></th>
+                    <th scope="col" class="th-date">{{date}}</th>
+                </tr>
+                </thead>
+                <tbody>
+		<td></td>
+		<td>
+		<textarea name='body' class="textarea-body">{{body}}</textarea>
+		<br>
+		<br>
+		<input name="checkbox" type="checkbox" onclick="checkpw(this.form)">
+		<label for="coding">비밀글 설정</label>
+		<input name="pw" type="password" disabled value={{pw}}>	
+		<br>
+		<br>
+		<input type="file" >
+		</td>
+		</tbody>
+            </table>
+	   <input type='submit' class="btn btn-dark2" value='수정 완료'>	
+	    <br><br><br><br>
+	</form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href=" {{ url_for('static', filename='css/css template.css') }}">
+<script language="javascript">
+function checkpw(frm)
+{
+   if (frm.pw.disabled==true)
+    frm.pw.disabled=false
+   else
+    frm.pw.disabled=true
+}
+</script>
+</head>
+<body>
+<section class="notice">
+  <div class="page-title">
+        <div class="container">
+            <h3>글쓰기</h3>
+        </div>
+    </div>
+
+  <!-- board list area -->
+    <div id="board-list">
+        <div class="container">
+            <table class="board-table">
+                <form action='/create/' method='POST' enctype="multipart/form-data">
+		<thead>
+                <tr>
+                    <th scope="col" class="th-num">제목</th>
+                    <th scope="col" class="th-title"><input type='text' name='title' class="textarea-head" name='title' placeholder='제목을 입력하세요.'></th>
+                    <th scope="col" class="th-date"></th>
+                </tr>
+                </thead>
+                <tbody>
+		<td></td>
+		<td>
+		<textarea name='body' class="textarea-body" placeholder='본문을 입력하세요.'></textarea>
+		<br>
+		<br>
+		<input name="checkbox" type="checkbox" onclick="checkpw(this.form)">
+		<label for="coding">비밀글 설정</label>
+		<input name="pw" type="password" disabled>	
+		<br>
+		<br>
+		<input type="file" name='file'>
+		</td>
+		</tbody>
+            </table>
+	   <input type='submit' class="btn btn-dark2" value='완료'>	
+	    <br><br><br><br>
+	</form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

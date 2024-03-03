@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<link rel="stylesheet" href=" {{ url_for('static', filename='css/css template.css') }}"
+</head>
+
+<body>
+    <center>
+    <div>
+	<br><br><br><br><br><br>
+       <h1 align="center">로그인</h1><br><br>
+	<hr>
+        <form action="/login/" method="POST" name="login">
+	<div>
+	<br><br>
+	    <b class="name">ID</b><br><br>
+            <input type="text" class="text" id="username" name="ID1" placeholder="    ID를 입력해주세요.">
+	<br><br>
+        </div>
+        <div>
+	<b class="name">PW</b><br><br>
+            <input class="text" type="password" id="password" name="PW1" placeholder="    비밀번호를 입력해주세요."><br><br>  
+        </div>
+	<br>
+        </div>
+        <div>
+	<br>
+            <button type="submit" class="sign_up" >로그인</button>
+</form>
+	<br>
+	<br>
+	    <button class="sign_up2" onclick="location.href='/findid/'" >아이디 찾기</button>
+	    <button class="sign_up2" onclick="location.href='/findpw/'" >비밀번호 찾기</button>
+	<br>
+	<br>
+	    <button class="sign_up" onclick="location.href='/register/'" >회원가입</button>
+	 <br>
+        </div>
+    </div>
+    </center>
+</body>
+
+</html>
